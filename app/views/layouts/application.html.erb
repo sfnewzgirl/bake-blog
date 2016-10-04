@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <% if session[:user_id] %>
+      <p> You're logged in</p>
+    <% else %>
+      <p>Go log in! </p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
